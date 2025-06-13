@@ -1,0 +1,18 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+class Main{
+	public static void main(String[] args) {
+		BigDecimal a = new BigDecimal("2.071233112");
+		BigDecimal b = new BigDecimal("1.07122221");
+
+		BigDecimal c = a.add(b);
+		BigDecimal d = a.subtract(b);
+		BigDecimal e = a.multiply(b);
+		BigDecimal f = a.divide(b, 10, RoundingMode.HALF_UP);
+		
+        System.out.println(c);
+        System.out.println(d);
+        System.out.println(e);
+        System.out.println(f);
+	}
+}
