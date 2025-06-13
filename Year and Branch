@@ -1,0 +1,104 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        int year;
+        String branch;
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter the year (1-4): ");
+        year = scan.nextInt();
+        scan.nextLine();  
+
+        if (year == 1) {
+            System.out.println("Subjects for 1st year (common to all branches):");
+            System.out.println("Physics");
+            System.out.println("Chemistry");
+            System.out.println("Maths");
+
+        } else if (year >= 2 && year <= 4) {
+            System.out.print("Enter your branch (CSE / ECE / MECH): ");
+            branch = scan.nextLine();
+
+            switch (year) {
+                case 2:
+                    switch (branch.toUpperCase()) {
+                        case "CSE":
+                            System.out.println("DSA");
+                            System.out.println("DBMS");
+                            System.out.println("C++");
+                            break;
+                        case "ECE":
+                            System.out.println("Signal");
+                            System.out.println("Logic Design");
+                            System.out.println("Network Analysis");
+                            break;
+                        case "MECH":
+                            
+                            System.out.println("BTD");
+                            System.out.println("MOM");
+                            System.out.println("SOM");
+                            break;
+                        default:
+                            System.out.println("Invalid branch!");
+                    }
+                    break;
+
+                case 3:
+                    switch (branch.toUpperCase()) {
+                        case "CSE":
+                            
+                            System.out.println("OS");
+                            System.out.println("Django");
+                            System.out.println("Java");
+                            break;
+                        case "ECE":
+                        
+                            System.out.println("Microcontroller");
+                            System.out.println("Circuit Design");
+                            System.out.println("Node.js");
+                            break;
+                        case "MECH":
+            
+                            System.out.println("Thermodynamics");
+                            System.out.println("React");
+                            System.out.println("DSA Advanced");
+                            break;
+                        default:
+                            System.out.println("Invalid branch!");
+                    }
+                    break;
+
+                case 4:
+                    switch (branch.toUpperCase()) {
+                        case "CSE":
+                
+                            System.out.println("AI");
+                            System.out.println("DS");
+                            System.out.println("Python");
+                            break;
+                        case "ECE":
+                    
+                            System.out.println("VLSI");
+                            System.out.println("Communication Systems");
+                            System.out.println("Embedded Systems");
+                            break;
+                        case "MECH":
+
+                            System.out.println("Robotics");
+                            System.out.println("CAD/CAM");
+                            System.out.println("Power Plant Engineering");
+                            break;
+                        default:
+                            System.out.println("Invalid branch!");
+                    }
+                    break;
+            }
+        }
+        else {
+            System.out.println("Invalid year! Please enter a value between 1 and 4.");
+        }
+
+    
+    }
+}
