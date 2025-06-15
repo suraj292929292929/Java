@@ -1,0 +1,16 @@
+//tostring() 
+
+class Fan{
+    String name;
+    int no_of_blades;
+    String color;
+}
+class Main{
+    public static void main(String[] args){
+        Fan a  = new Fan();
+        System.out.println(a.toString());
+        Fan b ; 
+        b =  a ;
+        System.out.println(b.toString());
+    }
+}
