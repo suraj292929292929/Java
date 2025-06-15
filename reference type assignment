@@ -1,0 +1,38 @@
+//Reference type assignment
+
+class Fan{
+    String name;
+    int no_of_blades;
+    String color;
+}
+
+class Main{
+    public static void main(String[] args){
+            Fan  a  = new Fan();
+            a.name = "usha";
+            a.no_of_blades = 3;
+            a.color = "blue";
+            System.out.println(a.name);
+            System.out.println(a.no_of_blades);
+            System.out.println(a.color);
+            
+            
+            Fan b;
+            b = a;
+            System.out.println(b.name);
+            System.out.println(b.no_of_blades);
+            System.out.println(b.color);
+            b.name = "hell";
+            b.no_of_blades = 10;
+            b.color = "yellow";
+            System.out.println(b.name);
+            System.out.println(b.no_of_blades);
+            System.out.println(b.color);
+            
+            System.out.println(a.name);
+            System.out.println(a.no_of_blades);
+            System.out.println(a.color);
+            
+    }
+    
+}
