@@ -1,0 +1,42 @@
+// 3D jagged array in java
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter number of schools: ");
+        int schools = scan.nextInt();
+
+        int[][][] marks = new int[schools][][];
+
+        for (int i = 0; i < schools; i++) {
+            System.out.print("Enter number of classrooms in school " + (i + 1) + ": ");
+            int classroom = scan.nextInt();
+            marks[i] = new int[classroom][];  
+
+            for (int j = 0; j < classroom; j++) {
+                System.out.print("Enter number of students in classroom " + (j + 1) + ": ");
+                int students = scan.nextInt();
+                marks[i][j] = new int[students];  
+
+                for (int k = 0; k < students; k++) {
+                    System.out.print("Enter marks for student " + (k + 1) + ": ");
+                    marks[i][j][k] = scan.nextInt();
+                }
+            }
+        }
+        System.out.println("\n--- Displaying Entered Marks ---");
+        for (int i = 0; i < schools; i++) {
+            System.out.println("School " + (i + 1) + ":");
+            for (int j = 0; j < marks[i].length; j++) {
+                System.out.print("  Classroom " + (j + 1) + ": ");
+                for (int k = 0; k < marks[i][j].length; k++) {
+                    System.out.print(marks[i][j][k] + " ");
+                }
+                System.out.println();
+            }
+        }
+
+    }
+}
